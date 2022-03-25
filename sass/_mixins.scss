@@ -15,7 +15,6 @@
 }
 
 
-
 //
 
 
@@ -96,15 +95,15 @@
 
 @mixin seemr-card {
     position: absolute;
-    top: 12em;
+    top: 11em;
     right: 0;
-    left:1;
     height: 40px;
     background-color: transparent;
     border: 1px solid $font-blue_clr;
     color: $font-blue_clr;
     border-radius: 25px;
-    padding: 0 25px;
+    padding: 0 30px;
+    margin: 0 20px 0 25px;
     display: inline-flex;
     align-items: center;
     font-size: 17px;
@@ -112,8 +111,9 @@
     transition-timing-function: ease-in-out;
 
     &:hover {
-        background-color: $btn-dblue_clr;
-        opacity: .2;
+        background-color: $font-blue_clr;;
+        color: $white_clr;
+        outline: 0;
     }
 }
 

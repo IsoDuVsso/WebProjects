@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" media="all" href="./libs/bootstrap.css" />
+    <link rel="stylesheet" media="all" href="./libs/bootstrap.js" />
+    <link rel="stylesheet" media="all" href="./css/style.css" />
+    <script type="" src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="importmap">
+        {
+          "imports": {
+            "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+          }
+        }
+    </script>
+
+</head>
+
+<body>
+    <noscript aria-hidden="true"><iframe src="#" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- Page body -->
+    <div id="app" role="main" class="region region-content js-quickedit-main-content">
+        <div role="main" class="region region-content col-sm-12 row page">
+            <!-- Pages content -->
+            <div class="container-fluid">
+                <div class="row ">
+
+                    <!-- Popup sur le OnLoad de la page : jQuery -->
+                    <div class='popup'>
+                        <div class='cnt223'>
+                            <h1><b> Bienvenue sur ma maquette</b></h1>
+                            <br>
+                            <p>
+                                Bonjour Eddy et Mickaël.
+                                <br />
+                                Je vous présente aujourd'hui le travail que j'ai réalisé.
+                                <br /><br>
+                                <a href='' class='close' style="color: royalblue;"> <b>X</b></a>
+                            </p>
+                        </div>
+                        <div style="width: 2478px; font-size: 32pt; color:white; height: 1202px; opacity: 0.4;"
+                            id="mask"></div>
+                    </div>
+
+                    <!-- Premire partie de la page : texte du haut <==> paragraphe 1  -->
+                    <div class="col col-12">
+                        <section class="wrap-1">
+
+                            <div class="LandingDownload-header">
+                                <h1 class="landingdownload-title">
+                                    <b> Do we <span style="font-weight: normal;">"drink our own champagne"</span> *?
+                                        <br> Of course we do!</b>
+                                </h1>
+
+                                <h2 class="landingdownload-under-title">
+                                    You too can create critical business applications with the Bonita <br>
+                                    low-code, open source platform - just like we did
+                                </h2>
+                            </div>
+
+                            <div class="CarouselBloc">
+
+                                <div class="vid-btn" style="justify-content: center;">
+                                    <a class="LandingDownload-button-r" href="#" @click="callToWeatherApi()">
+                                        {{ bouton1 }}
+                                    </a>
+                                    <a class="LandingDownload-button-b" href="#" @click="callToWeatherApi()">
+                                        {{ bouton2 }}
+                                    </a>
+                                </div>
+
+                                <br>
+
+                                <div class="LandingDownload-video">
+                                    <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media;"
+                                        allowfullscreen="" loading="lazy" frameborder="1" height="320" width="720"
+                                        scrolling="no" v-bind:src="source">
+                                    </iframe>
+                                </div>
+
+                            </div>
+
+                            <br>
+
+                            <div class="CardBloc">
+                                <div class="blocContainer3">
+
+                                    <img alt="" class="bloc-img" src="//unsplash.it/255/305" />
+
+                                    <h2 class="bh">Critical business apps we built with Bonita</h2>
+                                    <ul class="listCard" style="display: flex; margin-top:4em;">
+                                        <li>
+                                            <div class="ul-cart">
+                                                <b> Customer Service Center <br> Objective </b>: Create a great user
+                                                experience for Bonita Enterprise customers <b> Time to deployment: </b>
+                                                4 months
+                                                <a id="seemr-card" href="#">See more</a>
+                                            </div>
+
+                                        </li>
+                                        <li>
+                                            <div class="ul-cart">
+                                                <b>Bonita Certification Platform <br> Objective:</b> Create an interactive, autonomous
+                                                training evaluation for self-paced learning & Bonita platform certification <br>
+                                                <b>Time to deployment:</b> X months
+
+                                                <a id="seemr-card" href="#">See more</a>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+                            </div>
+
+                            <br>
+
+                            <div class="ContentBloc">
+                                <img class="LandingDownload-schema" src="//unsplash.it/300/270" />
+
+                                <h2 class="bh"><span>2 APPS, 5 LESSONS LEARNED</span></h2>
+
+                                <!-- A retravailler -->
+                                <br><br>
+                                <h2><span><b>1.</b> Sometimes you just have to <br> build it yourself</span></h2>
+                                <ul class="LandingDownload-list" style="display:table;">
+                                    <li>Our requirements were out-of-scope of existing possible solutions </li>
+                                    <li>Custom development on Bonita gave us full control over shaping the
+                                        result</li>
+                                    <li>The Bonita Living Applications can evolve with our business need</li>
+                                </ul>
+                                <a class="LandingDownload-button seemr" href="#">See more</a>
+                            </div>
+
+                        </section>
+                    </div>
+
+                    <section class="col col-12 b section-1">
+                        <div class="blocContainer-d container1">
+
+                            <h2><span style="color:black;"><b>2.</b> Two challenges we met and mastered</span></h2>
+                            <ul class="LandingDownload-list" style="display:table;">
+                                <li>Integration with Salesforce can degrade performance as queries take time.
+                                    But as Bonita Cloud <br> is running on a clustered environment, we use a distributed
+                                    cache
+                                </li>
+                                <li>We didn’t want to rely on (S)FTP(S) for security reasons. All cloud vendors
+                                    offer Java SDKs that make them <br> easy to integrate inside integration connectors
+                                    and REST API extensions, and
+                                    we used them extensively
+                                </li>
+                            </ul>
+                            <a class="LandingDownload-button seemr" href="#">See more</a>
+
+                        </div>
+                    </section>
+
+                    <section class="col col-12 w section-2" style="box-sizing: content-box;">
+                        <img class="LandingDownload-schema" src="//unsplash.it/320/255"
+                            style="position:absolute; left:18em; z-index:0;" />
+                        <div class="blocContainer-d" style="margin-left: 40em;">
+
+                            <h2><span style="color:#19465f;"><b>3.</b> Bonita really is for mission critical
+                                    processes</span></h2>
+                            <br>
+                            <p>
+                                Our customer-centered approach requires a state-of-the-art, customized <br> Customer Service Center - built on Bonita.
+                                <br><br>
+                                Technical and business teams using the Bonita platform need to be well trained <br> and certified at their own pace, using an evaluation process built on Bonita.
+                            </p>
+                            <a class="LandingDownload-button seemr" href="#">See more</a>
+
+                        </div>
+                    </section>
+
+                    <section class="col col-12 b section-3">
+                        <div class="blocContainer-d">
+
+                            <img class="LandingDownload-schema" src="//unsplash.it/250/280"
+                                style="position:absolute; right:190px; margin-top: 35px;" />
+                            <h2><span style="color:black;"><b>4.</b> Include the right people on the project team</span>
+                            </h2>
+                            <span aria-label="ul4" style="font-size: small;">Our core Bonita application development
+                                teams included:</span>
+                            <ul id="ul4" class="LandingDownload-list" style="display:table;">
+                                <li>Application owner</li>
+                                <li>Usability Specialist</li>
+                                <li>Design specialist</li>
+                                <li>and... an application developer</li>
+                            </ul>
+                            <span style="font-size: small;">(Some of them never worked on a Bonita project before)!</span>
+
+                        </div>
+                    </section>
+
+                    <section class="col col-12 w section-4">
+                        <div class="blocContainer-d">
+
+                            <h2><span style="color:#19465f;"><b>5.</b> One fundamentally important tip to share</span>
+                            </h2>
+                            <p>
+                                Communicate about business needs in a way that so developers understand what the end result <br>
+                                is intended for. And developers SHOULD point out when a request will be expensive to implement. <br>
+                                When our developers understood the intent and suggested an alternative, we almost always <br>
+                                found a solution that saved time and complexity.
+                            </p>
+
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main-vue.js" type="module"> </script>
+    <script src="./libs/jquery-3.6.0.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+
+            var maskHeight = $(window).height();
+            var maskWidth = $(window).width();
+            $('#mask').css({
+                'width': maskWidth,
+                'height': maskHeight
+            });
+            $('#mask').fadeIn(500);
+            $('#mask').fadeTo('fast', 0.6);
+
+            var overlay = $('<div id="overlay"></div>');
+            overlay.show();
+            overlay.appendTo(document.body);
+            $('.popup').show();
+            $('.close').click(function () {
+                $('.popup').hide();
+                overlay.appendTo(document.body).remove();
+                return false;
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

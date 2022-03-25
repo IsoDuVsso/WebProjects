@@ -1,0 +1,53 @@
+//PLACEHOLDERS
+%flex-center {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%hide {
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+%extend-test {
+    background-color: yellow;
+    width: 300px;
+    height: 400px;
+}
+
+%p-ellipse-grey {
+    &::before {
+        content: '';
+        margin-left: -10px;
+        position: absolute;
+        box-sizing: content-box;
+        width: 40px; height: 40px;
+        border-radius: 50%;
+        background: $grey_clr;
+        opacity: .5;
+    }
+}
+
+%p-ellipse-white {
+    &::before {
+        content: '';
+        margin-left: -10px;
+        position: absolute;
+        box-sizing: content-box;
+        width: 40px; height: 40px;
+        border-radius: 50%;
+        background: $white_clr;
+        opacity: .5;
+    }
+}
+
+%w-b {
+    z-index:auto;
+    position:static;
+    padding-top: 2em; padding-bottom: 2em;
+}
+
+//
